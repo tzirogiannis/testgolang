@@ -9,6 +9,8 @@ GOURL='http://localhost'
 #UPOPTS="-d --no-recreate --no-build --no-deps"
 
 deploy() {
+  git pull
+
   eval $BIN $OPTS up $UPOPTS
   RETVAL=$?
   if [ ${RETVAL} -ne 0 ]; then echo "Failure in deploying app"; fi
