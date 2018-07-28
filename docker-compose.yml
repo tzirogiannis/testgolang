@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  nginx:
+    build: ./nginx
+    links:
+        - backend1
+        - backend2
+    ports:
+      - '80:80'
+    networks: [goappnet]
+
+  backend1:
+      container_name: backend1
+      build: ./app
+      networks: [goappnet]
+  
+  backend2:
+      container_name: backend2
+      build: ./app
+      networks: [goappnet]
+
+networks:
+  goappnet:
+    driver: bridge
