@@ -32,4 +32,4 @@ func main() {
 
 * Anyone should be able to execute the above test by following the instructions on the repository
 * No manual intervention should be needed past launching the deployment
-* Desireable things to consider: IAC, Docker, CI/CD, AWS, Terraform, TDD etc
+* Desirable things to consider: IAC, Docker, CI/CD, AWS, Terraform, TDD etc
